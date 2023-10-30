@@ -1,3 +1,4 @@
+#F3nix
 import tkinter as tk
 from tkinter import filedialog
 import subprocess
@@ -7,7 +8,7 @@ import requests
 # Función para procesar un archivo
 def procesar_archivo(archivo):
     palabras = set()
-    with open(archivo, 'r') as file:
+    with open(archivo, 'r', encoding='utf-8', errors='ignore') as file:
         for line in file:
             palabras.update(line.split())
     return palabras
@@ -94,3 +95,4 @@ resultado_label = tk.Label(ventana, text="")
 resultado_label.pack()
 
 ventana.mainloop()
+
